@@ -1,14 +1,8 @@
-import mysql from "mysql2"; // import library of mysql tools
+import { createConnection } from "mysql2"; // import library of mysql tools
+import { dbConnection } from "./secrets.js";
 
 try {
-  const db = mysql.createConnection({
-    // connect and call connection "db"
-    host: "127.0.0.1",
-    database: "bocacode",
-    user: "root",
-    // port: 3306,
-    // password: 'test1234',
-  });
+  const db = createConnection(dbConnection);
 
   console.log("We are connected...");
   
@@ -21,7 +15,7 @@ try {
     if (err) console.log("ERROR -> ", err);
     console.table(results);    
   });
-  
+
   db.end();
   
 }
