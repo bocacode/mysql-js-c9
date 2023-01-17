@@ -3,8 +3,9 @@
   "version": "0.0.1",
   "description": "Our first time connecting to mysql via javascript",
   "main": "index.js",
+  "type": "module",
   "scripts": {
-    "test": "l"
+    "start": "node index.js"
   },
   "keywords": [
     "mysql",
